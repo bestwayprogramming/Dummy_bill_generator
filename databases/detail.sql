@@ -1,21 +1,19 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
--- https://www.phpmyadmin.net/
+-- version 3.3.9
+-- http://www.phpmyadmin.net
 --
--- Host: localhost:8889
--- Generation Time: Sep 02, 2022 at 02:11 AM
--- Server version: 5.7.34
--- PHP Version: 8.0.8
+-- Host: localhost
+-- Generation Time: Sep 17, 2022 at 10:38 AM
+-- Server version: 5.5.8
+-- PHP Version: 5.3.5
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `bill`
@@ -27,24 +25,25 @@ SET time_zone = "+00:00";
 -- Table structure for table `detail`
 --
 
-CREATE TABLE `detail` (
+CREATE TABLE IF NOT EXISTS `detail` (
+  `id` int(50) NOT NULL AUTO_INCREMENT,
   `uname` varchar(20) NOT NULL,
   `email_id` varchar(50) NOT NULL,
   `date` date NOT NULL,
-  `time` time NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `time` time NOT NULL,
+  `itemdesc` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
 
 --
 -- Dumping data for table `detail`
 --
 
-INSERT INTO `detail` (`uname`, `email_id`, `date`, `time`) VALUES
-('dxfsd', 'dsfsd@jsmd.com', '2022-08-08', '12:59:00'),
-('dxfsd', 'dsfsd@jsmd.com', '2022-08-08', '12:59:00'),
-('kelin', 'jsdhgjs@gmail.com', '2022-08-15', '01:02:00'),
-('prafulla', 'prafulla301280@icloud.com', '2022-08-08', '12:00:00');
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+INSERT INTO `detail` (`id`, `uname`, `email_id`, `date`, `time`, `itemdesc`) VALUES
+(1, 'KELIN', 'kelin@gmail.com', '2022-08-18', '01:35:00', ''),
+(2, 'VIVEK', 'vivek@gmail.com', '2022-08-17', '01:36:00', ''),
+(3, 'OM', 'om@gmail.com', '2022-08-17', '01:37:00', ''),
+(12, 'vivek', 'vivek@gmail.com', '2030-06-28', '11:24:00', ''),
+(13, 'root', 'etjr@wgfd.sdcws', '1111-11-11', '11:11:00', ''),
+(14, 'root', 'etjr@wgfd.sdcws', '2012-02-23', '06:06:00', 'muffin260'),
+(15, 'root', 'etjr@wgfd.sdcws', '2012-02-23', '06:06:00', 'muffin260');
