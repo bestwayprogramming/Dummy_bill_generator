@@ -1,21 +1,11 @@
-
-<!-- // download composer reuire dompdf/dompdf
-// require_once 'vendor/autoload.php';
-//use Dompdf\Dompdf;
-// use Dompdf\Options;
-// use Dompdf\Adapter\CPDF;
-// use Mpdf\Tag\Option;
-
-// $html = '' -->
-<!-- 
-    <?php 
+<?php 
 include 'php/connection.php';
 $con= "select date, time, itemdesc from detail ORDER BY id DESC LIMIT 1";
 $result=mysqli_query($conn,$con);
 while($row = mysqli_fetch_array($result)) 
 {     
 ?> 
--->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,7 +19,7 @@ while($row = mysqli_fetch_array($result))
                 size:20cm 50cm;
             }
     </style>
-    <link rel="stylesheet" href="http://localhost/20BCA89/DUMMY%20BILL/Dummy-Bill-master/Dummy-Bill-master/css/pdf.css">
+    <link rel="stylesheet" href="http://localhost:8080/Dummy_bill_generator/css/pdf.css">
 </head>
 
 <body>
@@ -40,7 +30,7 @@ while($row = mysqli_fetch_array($result))
             <thead>
                 <tr>
                     <th colspan="5">
-                        <p><img src="http://localhost/20BCA89/DUMMY%20BILL/Dummy-Bill-master/Dummy-Bill-master/images/company_logo/Unknown.png" alt="starbucks"></p>
+                        <p><img src="http://localhost:8080/Dummy_bill_generator/images/company_logo/Unknown.png" alt="starbucks"></p>
                     </th>
 
                 </tr>
@@ -327,38 +317,8 @@ while($row = mysqli_fetch_array($result))
         </table>
     </div>
         </div>
-        <input type="button"onclick="printDiv('printableArea')" value="Print"class="form-control btn btn-primary"   >	
+        <!-- <input type="button"onclick="printDiv('printableArea')" value="Print"class="form-control btn btn-primary"   >	 -->
 
 </body>
 
 </html>
-
-<!-- '; ?> -->
-
-
-<!-- // $option=new Options();
-// $option->set('isRemoteEnabled',TRUE);
-// $dompdf = new Dompdf($option);
-
-// $dompdf->loadHtml($html);
-// // (Optional) Setup tde paper size and orientation
-// $dompdf->setPaper('', 'landscape');
-// // Render tde HTML as PDF
-// $dompdf->render();
-
-// // Output tde generated PDF to Browser
-// $dompdf->stream(); -->
-
-
-<!-- <script>
-function printDiv(divName) {
-     var printContents = document.getElementById(divName).innerHTML;
-     var originalContents = document.body.innerHTML;
-
-     document.body.innerHTML = printContents;
-
-     window.print();
-
-     document.body.innerHTML = originalContents;
-} -->
-<!-- </script> -->
