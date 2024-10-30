@@ -12,12 +12,17 @@
 body {
     margin: 0;
     background-color: #f7f7f7;
+    text-align: center !important;
+}
+*{
+    text-align: center !important;
 }
 
 table {
     width: 100%;
     margin-bottom: 10px;
     border-collapse: collapse;
+    tex
 }
 
 thead p, td p {

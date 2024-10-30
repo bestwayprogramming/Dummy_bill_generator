@@ -1,9 +1,9 @@
 <?php
-    mysqli_report(MYSQLI_REPORT_OFF);
+
     /* @ is used to suppress warnings */
-    $conn = @new mysqli('localhost', 'admin', 'admin', 'bill');
-    if ($conn->connect_error) {
-        /* Use your preferred error logging method here */
-        error_log('Connection error: ' . $conn->connect_error);
+    $conn = @new mysqli('localhost', 'root', '', 'bill');
+    // if the connection fails send a message
+    if (!$conn) {
+        die("Connection failed. Notify Administrator.");
     }
 ?>

@@ -6,7 +6,7 @@ $date = $_POST['date'];
 $time = $_POST['time'];
 $item_name = $_POST['item_name'];
 
-$result = $conn->query("INSERT INTO `detail` (`id`, `uname`, `email_id`, `date`, `time`, `itemdesc`)
+$result = mysqli_query($conn,"INSERT INTO `detail` (`id`, `uname`, `email_id`, `date`, `time`, `itemdesc`)
     VALUES ( NULL, '$uname', '$email_id', '$date', '$time','$item_name')");
 
 if ($result === true) {

@@ -18,7 +18,7 @@ $dompdf = new Dompdf($options);
 $dompdf->loadHtml($html);
 
 // Set a custom paper size for a receipt format (e.g., 3 inches by 8 inches)
-$dompdf->setPaper([0, 0, 216, 576]); // Width and height in points for a receipt format
+$dompdf->setPaper('A3'); // Width and height in points for a receipt format
 
 // Render the HTML as PDF
 $dompdf->render();
