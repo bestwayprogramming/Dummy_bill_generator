@@ -1,53 +1,72 @@
-.starbucks{
-    width: 550px;
-    height: 1350px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid #ddd;
-    margin-top: 40px;
-    margin-bottom: 20px;
-} 
-
-body{
-    margin:0px;
+.starbucks {
+    width: 300px;
+    margin: 0 auto;
+    border: 1px dashed #ccc;
+    padding: 15px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ffffff, #f2f2f2); /* Gradient from white to light gray */
+    color: #333; /* Dark gray text */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional soft shadow for realism */
 }
 
-/* img{
-    position: absolute;
-    top:50%;
-    left:50%;
-    /* transform: translate(50%,50%); 
-} */
+body {
+    margin: 0;
+    background-color: #f7f7f7;
+}
 
-table{
-    width:550px;
-    padding-left: 20px;
-    padding-right: 20px;
+table {
+    width: 100%;
     margin-bottom: 10px;
+    border-collapse: collapse;
 }
 
-td p{
-    font-size: 15px;
-    font-weight:bold;
-    font-family:Arial, Helvetica, sans-serif;
+thead p, td p {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+thead, .rows {
     text-align: center;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    align-items: center;
-}
-.rows{
-    padding-left:10px;
 }
 
-.row{
-    padding-right: 15px;
+td {
+    font-size: 12px;
+    padding: 4px;
 }
-/* td{
-    border: 1px solid black;
-} */
 
-.part{
-    border: 1px solid black;
+.rows, .part p {
+    padding: 5px;
+}
+
+.part {
+    border-top: 1px dashed #ccc;
     padding-top: 5px;
-    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+.header-img {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.company-info, .invoice-info {
+    text-align: center;
+    font-size: 10px;
+    line-height: 1.2;
+    color: #333;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 10px;
+    color: #333;
+}
+
+.total-section {
+    text-align: right;
+    font-size: 12px;
+    padding-top: 10px;
+    border-top: 1px dashed #ccc;
 }

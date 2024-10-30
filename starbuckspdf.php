@@ -14,11 +14,7 @@ while($row = mysqli_fetch_array($result))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        @page{
-                size:20cm 50cm;
-            }
-    </style>
+
     <link rel="stylesheet" href="/css/pdf.css">
 </head>
 
