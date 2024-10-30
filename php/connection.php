@@ -1,14 +1,9 @@
 <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "root";
-    $db='bill';
-    
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $db);
-    
-    // Check connection
+    mysqli_report(MYSQLI_REPORT_OFF);
+    /* @ is used to suppress warnings */
+    $conn = @new mysqli('localhost', 'admin', 'admin', 'bill');
     if ($conn->connect_error) {
-      die("Connection failed: " . $conn->connect_error);
-    } 
+        /* Use your preferred error logging method here */
+        error_log('Connection error: ' . $conn->connect_error);
+    }
 ?>

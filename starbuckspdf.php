@@ -1,10 +1,10 @@
-<?php 
+<?php
 include 'php/connection.php';
 $con= "select date, time, itemdesc from detail ORDER BY id DESC LIMIT 1";
 $result=mysqli_query($conn,$con);
-while($row = mysqli_fetch_array($result)) 
-{     
-?> 
+while($row = mysqli_fetch_array($result))
+{
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,18 +19,18 @@ while($row = mysqli_fetch_array($result))
                 size:20cm 50cm;
             }
     </style>
-    <link rel="stylesheet" href="http://localhost:8080/Dummy_bill_generator/css/pdf.css">
+    <link rel="stylesheet" href="/css/pdf.css">
 </head>
 
 <body>
-<div id="printableArea">	
+<div id="printableArea">
 
     <div class="starbucks">
         <table>
             <thead>
                 <tr>
                     <th colspan="5">
-                        <p><img src="http://localhost:8080/Dummy_bill_generator/images/company_logo/Unknown.png" alt="starbucks"></p>
+                        <p><img src="/images/company_logo/Unknown.png" alt="starbucks"></p>
                     </th>
 
                 </tr>
@@ -87,7 +87,7 @@ while($row = mysqli_fetch_array($result))
                     <td colspan="5">
                         <p>State Code-24</p>
                     </td>
-                    
+
                 </tr>
                 <tr>
                     <td colspan="5">
@@ -133,7 +133,7 @@ while($row = mysqli_fetch_array($result))
                 <td class="rows" colspan="2">
                     <p style="text-align: left;">Invoice Time: <?php echo $row['time']?></p>
                 </td>
-               
+
                 <td></td>
                 <td class="row" colspan="2">
                     <p style="text-align: right;">Partner :Daman</p>
@@ -159,7 +159,7 @@ while($row = mysqli_fetch_array($result))
             <tr class="part">
                 <td class="rows" colspan="4"><p style="text-align: left;"><?php echo $row['itemdesc'];?></p></td>
             </tr>
-            <?php 
+            <?php
                     }
                ?>
             <tr>
